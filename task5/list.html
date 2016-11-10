@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta  charset="UTF-8">
+    <title>列表</title>
+    <style>
+        body{
+            padding:20px;
+            font:15px "微软雅黑 Light";
+        }
+        .add{
+            float:right;
+            font-weight:bold;
+            font-size:40px;
+			cursor:pointer;
+        }
+        .wrap{
+		    position:relative;
+            padding:20px;
+            width:1000px;
+            height:550px;
+            border:1px solid #ccc;
+        }
+        .tableWrap{
+            position:relative;
+        }
+
+        table{
+            position:absolute;
+            border-collapse: collapse;
+            width:100%;
+			text-align:center;
+        }
+        table th,table td{
+            width:33.33%;
+            height:35px;
+            border:1px solid #ccc;
+        }
+        table th{
+            background:#eee;
+        }
+		table tr td:first-child{
+		cursor:pointer;
+		}
+		ul{
+		position:absolute;
+		bottom:10px;
+		left:calc(50% - 204px);
+		padding:0;margin:0;
+		}
+        ul li{
+            list-style-type: none;
+            display:inline-block;
+            margin-right:15px;
+			width:15px;
+			height:15px;
+			background:#fff;
+			color:#000;
+			border:2px solid #c0c0c0;
+			text-align:center;
+			font-size:10px;
+			cursor:pointer;
+        }
+		ul li.active{
+		background:blue;
+		border:2px solid blue;
+		color:white;
+		}
+		.hide{
+		display:none;
+		}
+		.wrap button{
+		width:100px;
+		height:40px;
+		background:transparent;
+		border:1px solid #ccc;
+		border-radius:5px;
+		position:absolute;
+		bottom:30px;
+		font:14px "微软雅黑 Light";
+		cursor:pointer;
+		}
+		.wrap button.del{
+		left:20px;
+		}
+		.wrap button.cancel{
+		left:150px;
+		display:none;
+		}
+		.dellist{
+		display:none;
+		position:absolute;
+		left:30px;
+		top:12px;
+		z-index:2;
+		}
+		input[type=checkbox]{
+		display:block;
+		margin-bottom:25px;
+		}
+		
+	
+
+
+     </style>
+    </head>
+<body>
+<div class="wrap">
+<span class="add">+</span>
+<p>已报名弟子</p>
+    <div class="tableWrap">
+	<div class="dellist">
+	<input name="del" type="checkbox"/>
+	<input name="del" type="checkbox"/>
+	<input name="del" type="checkbox"/>
+	<input name="del" type="checkbox"/>
+	<input name="del" type="checkbox"/>
+	<input name="del" type="checkbox"/>
+	<input name="del" type="checkbox"/>
+	<input name="del" type="checkbox"/>
+	<input name="del" type="checkbox"/>
+	<input name="del" type="checkbox"/>
+    <input name="del" type="checkbox"/>
+	</div>
+
+    </div>
+    <ul>
+
+    </ul>
+	<button class="del">删除</button>
+	<button class="cancel">取消</button>
+</div>
+
+<script type="text/javascript" src="../../jquery-2.2.4.js"></script>
+<script src="list.js"></script>
+</body>
+</html>

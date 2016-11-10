@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>杀人游戏身份发放(http://www.cnblogs.com/binyong)</title>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        body{margin:50px;font:15px "微软雅黑"}
+        @media screen and (max-width:768px){
+            .game{
+                width:100%;
+            }
+        }
+        @media screen and (min-width:768px){
+            .game{
+                width:768px;
+            }
+        }
+        .game{
+            border:1px dotted #ccc;
+            padding:10px;
+            overflow: hidden;
+        }
+        button{
+            width:60px;
+            height:30px;
+            background:#af4925;
+            color:#fff;
+            border-radius:5px;
+            border:none;
+            float:right;
+        }
+        *:focus{
+            outline:none;
+        }
+        .intro:after, form:after{
+            content:" ";
+            display:block;
+            clear:both;
+        }
+        .total, .killer,.cop, .people{
+            margin-top:15px;
+            border:1px solid grey;
+            border-radius:5px;
+            text-indent:2em;
+        }
+        input{
+            text-indent:2em;
+        }
+        .total{
+            border-color:#1245af;
+        }
+        .total>div, .killer>div,.cop>div, .people>div{
+            line-height:40px;
+            background:#ccc;
+        }
+        .total>div{
+            background:#1245af;
+        }
+        .total .hint{
+            margin-top:20px;
+            text-align: center;
+            color:#ccc;
+        }
+        .game form{
+            margin:15px 0 35px 0;
+        }
+        .game form input{
+            height:30px;
+            float:right;
+            margin-right:15px;
+            width:calc(100% - 100px);
+            border-radius:5px;
+            border:1px solid #ccc;
+        }
+        .game label{
+            line-height:30px;
+        }
+        .game .back, .game .start{
+            width:100px;
+            line-height:40px;
+            color:#fff;
+            border-radius:5px;
+            border:none;
+            margin-top:30px;
+            text-align: center;
+            cursor:pointer;
+        }
+        .game .back{
+            background:#af4925;
+            float:left;
+        }
+        .game .start{
+            background:lightgreen;
+            float:right;
+        }
+
+    </style>
+</head>
+<body>
+<div class="game">
+<h2>杀人游戏警版</h2>
+    <div class="intro">
+<button>介绍</button>
+    </div>
+<p>警察与杀手的生死时速</p>
+    <div>
+<div class="total">
+    <div>总人数</div>
+    <p class="hint">此版本的最小人数为：8 最大人数为：20, 请填入整数</p>
+    <form>
+        <label >人数</label>
+        <input type="text">
+    </form>
+</div>
+
+<div class="killer">
+    <div>杀手</div>
+    <form>
+        <label >人数</label>
+        <input type="text">
+    </form>
+</div>
+
+<div class="cop">
+    <div>警察</div>
+    <form>
+        <label >人数</label>
+        <input type="text">
+    </form>
+</div>
+
+<div class="people">
+    <div>水民</div>
+    <form>
+        <label >人数</label>
+        <input type="text">
+    </form>
+</div>
+    </div>
+    <div class="back">
+        返回列表
+    </div>
+    <div class="start">
+        <a> 开始游戏</a>
+    </div>
+</div>
+
+<script type="text/javascript" src="../../jquery-2.2.4.js"></script>
+<script src="task2-4.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+        <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>杀人游戏角色查看</title>
+    <style>
+        *{margin:0;padding:0;}
+        body{margin:50px;font:15px "微软雅黑"}
+        @media screen and (max-width:768px){
+            .game{
+                width:100%;
+            }
+        }
+        @media screen and (min-width:768px){
+            .game{
+                width:768px;
+            }
+        }
+        .game{
+            border:1px dotted #ccc;
+            padding:10px;
+            overflow: hidden;
+        }
+        .stop, .check , .remove{
+            width:100px;
+            line-height:40px;
+            color:#fff;
+            border-radius:5px;
+            border:none;
+            margin-top:30px;
+            text-align: center;
+            cursor:pointer;
+            background:#af4925;
+            margin-bottom:20px;
+        }
+        .stop{
+            float:right;
+        }
+        .check{
+            background:darkorange;
+            border:1px solid darkorange;
+            margin:0;
+        }
+        .remove{
+            background:lightgreen;
+            border:1px solid darkorange;
+        }
+        .clear:after{
+            content:" ";
+            display:block;
+            clear:both;
+        }
+        .num span{
+            display:inline-block;
+            margin-right:27%;
+            color:white;
+            padding:0 10px;
+            border-radius:5px;
+        }
+        .num span.prev{
+            background:#c3c3c3;
+        }
+        .num span.active{
+            background:forestgreen;
+        }
+        .num span.next{
+            background:darkred;
+        }
+        .assign, .num, .identity{
+            padding:30px 0;
+            border-bottom:1px solid #ccc;
+        }
+
+        .id-details{
+            margin:30px 0;
+            border:1px solid #1245af;
+            border-radius:5px;
+            padding:0 10px;
+            position:relative;
+            display:none;
+        }
+        .id-details .head{
+            box-sizing:border-box;
+            width:100%;
+            line-height:40px;
+            height:40px;
+            padding:0 10px;
+            position:absolute;
+            left:0;top:0;
+            background:#1245af;
+            color:white;
+        }
+        .id-details .role{
+            margin-top:50px;
+        }
+        .role span{
+            display:inline-block;
+            width:100px;
+            line-height:40px;
+            border:1px solid #cccccc;
+            text-align: left;
+            padding:0 10px;
+        }
+        .role span:last-child{
+            border-left:none;
+        }
+        .id-details .foot{
+            box-sizing:border-box;
+            width:100%;
+            position:absolute;
+            bottom:0;
+            left:0;
+            padding:10px 10px;
+            background:#c0c0c0;
+            border-top:1px solid #ccc;
+
+        }
+        .id-details .hint{
+            margin-top:30px;
+            margin-bottom:70px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="game">
+    <h2>杀人游戏警版</h2>
+    <div class="clear"><div class="stop">结束游戏</div></div>
+    <div class="assign">总人数 <span class="total"></span>( 【杀手：<span class="killer"></span>】 【警察：<span class="cop"></span>】 【水民：<span class="people"></span>】)</div>
+    <div class="num">
+        <span class="prev">开始</span>
+        <span class="active">1</span>
+        <span class="next">2</span>
+    </div>
+    <div class="identity">
+    <div class="check">
+
+        查看身份
+    </div>
+    </div>
+    <div class="id-details">
+        <div>
+            <p class="head"><span class="idNum">1</span>号玩家的身份信息</p>
+            <div class="change">
+
+            </div>
+        </div>
+    </div>
+    <div class="remove">
+        擦掉身份
+    </div>
+</div>
+
+
+<script type="text/javascript" src="../../jquery-2.2.4.js"></script>
+<script src="task3.js"></script>
+</body>
+</html>
